@@ -7,23 +7,40 @@
 //
 
 #import "ViewController.h"
+#import "UIView+MCTransition.h"
 
 @interface ViewController ()
-
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (nonatomic, strong) NSArray *imageArray;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.imageArray = @[@"img_1",@"img_2",@"img_3"];
+    
+    UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeAction:)];
+    swipeLeft.direction = UISwipeGestureRecognizerDirectionLeft;
+    [self.imageView addGestureRecognizer:swipeLeft];
+    self.imageView.userInteractionEnabled = YES;
+    self.imageView.image = [UIImage imageNamed:self.imageArray.firstObject];
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)swipeAction:(UISwipeGestureRecognizer *)gesture {
+    self.imageView.image = [UIImage imageNamed:self.imageArray[arc4random()%self.imageArray.count]];
+    [self.imageView setTransitionAnimationWithType];
 }
 
+- (void)transitionAnimation{
+    CATransition *trans = [CATransition animation];
+//   trans.type = kCATransitionFade;
+    trans.type = @"pageUnCurl";
+    // 动画的速度变化
+    trans.timingFunction =  [CAMediaTimingFunction functionWithName:@"easeIn"];;
+    trans.subtype = kCATruncationMiddle;
+    trans.duration = 1.0f;
+    [self.imageView.layer addAnimation:trans forKey:@"viewAnimation"];
+}
 
 @end

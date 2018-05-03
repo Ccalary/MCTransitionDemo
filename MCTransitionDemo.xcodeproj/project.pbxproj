@@ -13,6 +13,7 @@
 		0DF39CDE2093012C007518B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DF39CDD2093012C007518B7 /* Assets.xcassets */; };
 		0DF39CE12093012C007518B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DF39CDF2093012C007518B7 /* LaunchScreen.storyboard */; };
 		0DF39CE42093012C007518B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF39CE32093012C007518B7 /* main.m */; };
+		0DF39CEF2093119C007518B7 /* UIView+MCTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF39CEE2093119C007518B7 /* UIView+MCTransition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		0DF39CE02093012C007518B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0DF39CE22093012C007518B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DF39CE32093012C007518B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0DF39CED2093119C007518B7 /* UIView+MCTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+MCTransition.h"; sourceTree = "<group>"; };
+		0DF39CEE2093119C007518B7 /* UIView+MCTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+MCTransition.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +45,8 @@
 		0DF39CC82093012B007518B7 = {
 			isa = PBXGroup;
 			children = (
+				0DF39CED2093119C007518B7 /* UIView+MCTransition.h */,
+				0DF39CEE2093119C007518B7 /* UIView+MCTransition.m */,
 				0DF39CD32093012B007518B7 /* MCTransitionDemo */,
 				0DF39CD22093012B007518B7 /* Products */,
 			);
@@ -144,6 +149,7 @@
 				0DF39CD92093012B007518B7 /* ViewController.m in Sources */,
 				0DF39CE42093012C007518B7 /* main.m in Sources */,
 				0DF39CD62093012B007518B7 /* AppDelegate.m in Sources */,
+				0DF39CEF2093119C007518B7 /* UIView+MCTransition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +290,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2M227336GQ;
 				INFOPLIST_FILE = MCTransitionDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -300,6 +307,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2M227336GQ;
 				INFOPLIST_FILE = MCTransitionDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
