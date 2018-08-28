@@ -12,8 +12,8 @@
 /**
  动画效果
  */
-typedef enum {
-    MCTransitonAnimTypeFade,        //渐变，效果不明显
+typedef NS_ENUM(NSUInteger, MCTransitonAnimType) {
+    MCTransitonAnimTypeFade = 0,    //渐变，效果不明显
     MCTransitonAnimTypeMoveIn,      //新的移入
     MCTransitonAnimTypeReveal,      //旧的移出
     MCTransitonAnimTypePush,         //推入,新的推入旧的推出
@@ -26,27 +26,27 @@ typedef enum {
     MCTransitonAnimTypeCameraIrisHollowOpen, //摄像机开
     MCTransitonAnimTypeCameraIrisHollowClose //摄像机关
  
-} MCTransitonAnimType;
+};
 
 /**
  动画方向
  */
-typedef enum {
+typedef NS_ENUM(NSUInteger, MCTransitonAnimDirection) {
     MCTransitonAnimDirectionFromLeft,
     MCTransitonAnimDirectionFromRight,
     MCTransitonAnimDirectionFromTop,
     MCTransitonAnimDirectionFromBottom
-} MCTransitonAnimDirection;
+};
 
 /**
  动画的速度变化
  */
-typedef enum {
+typedef NS_ENUM(NSUInteger, MCTransitonAnimTimingFunc) {
     MCTransitonAnimTimingFuncLinear,      //线性
     MCTransitonAnimTimingFuncEaseIn,      //慢入
     MCTransitonAnimTimingFuncEaseOut,     //慢出
     MCTransitonAnimTimingFuncEaseInEaseOut//慢入慢出
-} MCTransitonAnimTimingFunc;
+};
 
 /**
  *  设置动画
